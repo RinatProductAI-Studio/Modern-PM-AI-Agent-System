@@ -72,7 +72,7 @@ This project demonstrates all of these skills in a practical, accessible way.
 
 ## 4. Architecture Overview
 
-Below is a simple text‑based diagram (ASCII diagram = a picture made of text characters):
+Below is a simple ASCII diagram:
 +----------------------+
 |    Daily Summary     |
 |        Agent         |
