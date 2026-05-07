@@ -1,199 +1,179 @@
-# Modern PM AI Agent System (Proof of Concept)
+Modern PM AI Agents — Multi‑Phase Project README (Portfolio‑Ready)
+1. Project Overview (Vision)
+Modern PM AI Agents is a conceptual multi‑agent analysis system that demonstrates how a Product Manager can orchestrate AI agents to interpret real engineering artifacts and produce risk assessments, executive summaries, and PM‑quality insights.
 
-This repository demonstrates how a modern, AI‑native Product Manager can design and deliver a multi‑agent system that automates core PM workflows such as risk detection, schedule awareness, planning alignment, and executive reporting.
+The project is intentionally:
 
-The goal is not to build a production system.  
-The goal is to provide a clear, simple, working example of how AI agents can support PM work — and how a PM can lead such a project from concept to prototype.
+AI‑native
 
-This project is part of a portfolio to demonstrate AI‑driven PM capabilities for resumes, LinkedIn, and interviews.
+PM‑led
 
----
+Grounded in real GPT4All artifacts
 
-## 1. Purpose of This Project
+Non‑automated and curated
 
-This project aims to:
+Designed for clarity, realism, and demo‑readiness
 
-- Demonstrate modern PM thinking and AI literacy  
-- Show how AI agents can automate PM workflows  
-- Provide a working proof‑of‑concept **Risk Agent**  
-- Document a simple multi‑agent architecture  
-- Serve as a live demo during interviews  
-- Showcase PM leadership in AI transformation  
+This repository is part of a PM portfolio demonstrating modern AI literacy, agent‑oriented thinking, and the ability to design and communicate AI‑driven workflows.
 
----
+2. High‑Level Architecture (All Phases)
+This system is built around a set of conceptual PM‑oriented agents:
 
-## 2. What This Project Includes (Alpha Version)
+Risk Agent — analyzes artifacts to detect and classify risks
 
-### ✅ Working Components
+Summary Agent — synthesizes risks into PM‑friendly summaries
 
-**Risk Agent (fully implemented in proof‑of‑concept mode)**  
-- Detects risks from text  
-- Classifies risks  
-- Scores risks (severity + hybrid probability)  
-- Tracks risks in a simple list  
-- Produces summaries  
-- Proposes actions (requires human approval)  
+Schedule Agent — future agent for timeline reasoning
 
-### 🟦 Defined but Not Implemented (Stubs)
+Planning Agent — future agent for roadmap alignment
 
-- Schedule Agent  
-- Planning Agent  
-- Collaboration Agent  
-- Daily Summary Agent  
+Collaboration Agent — future agent for cross‑team signals
 
-### 📘 Documentation
+Only the Risk Agent and Summary Agent are part of Alpha.
+The others are defined but not implemented until Beta/Final.
 
-- Architecture explanation  
-- Agent definitions  
-- Example inputs and outputs  
-- Project structure  
+Architecture Diagram (Conceptual)
+Code
++---------------------------+
+|   Curated GPT4All Data    |
+|  (issues, PRs, releases)  |
++-------------+-------------+
+              |
+              v
++---------------------------+
+|     Risk Agent (Alpha)    |
+|  - Detects risks          |
+|  - Classifies risks       |
+|  - Scores severity/prob   |
++-------------+-------------+
+              |
+              v
++---------------------------+
+|   Summary Agent (Alpha)   |
+|  - Synthesizes insights   |
+|  - Highlights patterns    |
+|  - PM-ready summary       |
++---------------------------+
 
-### 📂 Data Storage
+Future Agents (Beta/Final):
+- Schedule Agent
+- Planning Agent
+- Collaboration Agent
+3. Current Milestone — Alpha (Complete Definition)
+Alpha demonstrates the core PM workflow using real GPT4All artifacts:
 
-- `risks.json` (simple list of risks)  
-- JSON = a simple text format for storing structured data  
+Included in Alpha
+Risk Agent (full specification + prompt template)
 
----
+Summary Agent (full specification + prompt template)
 
-## 3. Why This Project Matters
+Curated GPT4All artifacts (manual copy into /sample_data)
 
-Modern PM roles increasingly require:
+Example outputs (risk list + summary)
 
-- Understanding of AI agents  
-- Ability to automate workflows  
-- Ability to design agentic systems  
-- Ability to collaborate with AI tools  
-- Ability to build small prototypes  
-- Ability to explain architecture clearly  
+Evaluation rubric
 
-This project demonstrates all of these skills in a practical, accessible way.
+Demo notebook (static examples)
 
----
+Updated README
 
-## 4. Architecture Overview
+OneDoc master document
 
-Below is a simple ASCII diagram:
-+----------------------+
-|    Daily Summary     |
-|        Agent         |
-+----------+-----------+
-^
-|
-+------------------+------------------+
-|                                     |
-+-------+--------+                    +--------+--------+
-|   Risk Agent   | <---- signals ---- | Schedule Agent  |
-+-------+--------+                    +--------+--------+
-|                                     |
-|                                     |
-v                                     v
-+-------+--------+                    +--------+--------+
-| Collaboration  |                    |   Planning      |
-|     Agent      |                    |     Agent       |
-+----------------+                    +-----------------+
+Alpha Philosophy
+Alpha is:
 
-**Risk Agent = the central reasoning engine.**  
-Other agents support it.
+Prompt‑driven
 
----
+Manual
 
-## 5. Risk Agent (Full Implementation)
+Curated
 
-The Risk Agent includes:
+Non‑automated
 
-### **Risk Intake Engine**
-Listens for signals from text, summaries, or other agents.
+Human‑in‑the‑loop
 
-### **Risk Structuring Engine**
-Creates structured risk entries with:
-- Title  
-- Description  
-- Category  
-- Impact type  
-- Severity  
-- State  
-- Owner  
+The goal is to show how PMs think, not to build a production system.
 
-### **Probability Engine (Hybrid Model)**
-Two inputs:
-- **ProbabilityOwner** (from questionnaire)  
-- **ProbabilitySystem** (from schedule analysis)  
+4. Future Milestones
+Beta (Planned)
+Beta introduces simulated agent behaviors and deeper PM workflows:
 
-Final probability = the higher of the two.
+Schedule Agent — timeline reasoning
 
-### **State Machine**
-Risk lifecycle:
-1. Signal detected  
-2. Needs validation  
-3. Confirmed  
-4. Mitigation in progress  
-5. Closed  
+Planning Agent — roadmap alignment
 
-### **Action Proposal Engine**
-Suggests actions but never executes without human approval.
+Collaboration Agent — cross‑team signals
 
----
+Expanded curated dataset
 
-## 6. Project Structure
+More example outputs
 
+Stronger evaluation rubric
+
+Optional lightweight orchestration (conceptual only)
+
+Beta remains non‑automated but expands the system’s analytical depth.
+
+Final (Aspirational Vision)
+The Final phase is a portfolio‑grade conceptual system, not a production tool:
+
+Optional automation
+
+Optional integrations (Jira, Slack)
+
+Case study + demo video
+
+Full multi‑agent orchestration (conceptual)
+
+PM‑ready narrative for interviews and presentations
+
+5. How the System Works (Manual Workflow)
+This project uses a human‑in‑the‑loop, prompt‑driven workflow:
+
+Select a curated GPT4All artifact from /sample_data.
+
+Paste it into the Risk Agent prompt.
+
+Review the generated risks.
+
+Paste the risks into the Summary Agent prompt.
+
+Review the executive summary.
+
+Compare outputs to the evaluation rubric.
+
+Use the examples in /examples for demos or interviews.
+
+This mirrors how PMs evaluate AI‑assisted workflows in real teams.
+
+6. Project Structure
+Code
 modern-pm-ai-agents/
-│
-├── agents/
-│   ├── risk_agent.md
-│   ├── schedule_agent_stub.md
-│   ├── planning_agent_stub.md
-│   ├── collaboration_agent_stub.md
-│   └── summary_agent.md
-│
-├── data/
-│   └── risks.json
-│
-├── examples/
-│   ├── example_input.md
-│   └── example_output.md
-│
-└── README.md
+  /sample_data      → curated GPT4All artifacts  
+  /prompts          → Risk Agent + Summary Agent prompt templates  
+  /notebooks        → demo notebook with static examples  
+  /docs             → external documentation + evaluation rubric  
+  /examples         → sample outputs (risks, summaries)  
+  /scripts          → optional helpers  
+  README.md         → project overview  
+  LICENSE           → license placeholder
+7. Why This Project Matters (PM Perspective)
+This project demonstrates:
 
+AI literacy
 
----
+Multi‑agent system design
 
-## 7. How to Use This Project
+Ability to interpret real engineering signals
 
-1. Open the **Risk Agent** file.  
-2. Review how the agent works.  
-3. Open the example input file.  
-4. Copy the sample text.  
-5. Paste it into an AI assistant (Copilot or Claude).  
-6. The agent will:
-   - Detect risks  
-   - Classify them  
-   - Score them  
-   - Produce a summary  
-7. Copy the output into `example_output.md`.  
-8. Use this project as a demo in interviews.  
+Ability to design PM‑ready workflows
 
----
+Ability to build clear, demo‑ready prototypes
 
-## 8. Future Roadmap
+Ability to communicate architecture and reasoning
 
-### **Beta**
-- Simulated schedule analysis  
-- Simulated questionnaires  
-- Compound risk detection  
-- PM identity accounts  
-- Demo video  
+It is a modern PM portfolio piece that shows how PMs lead AI‑driven initiatives.
 
-### **Final**
-- Optional Jira integration  
-- Optional Slack integration  
-- Optional website  
-- Case study  
-- Full multi‑agent orchestration  
-
----
-
-## 9. License
+8. License
 This project is open for learning, portfolio use, and demonstration.
-
-
 
